@@ -1,0 +1,30 @@
+---
+layout: default
+---
+<header>
+	<h1>{{page.title}}</h1>
+</header>
+<main>
+	
+	{% if page.image %}
+		<img style="display: block; margin: auto; width: 100%;" src="{{page.image}}" alt="{{page.title}}">
+		<br/>
+	{% endif %}
+	{% if page.pdf %}
+		<div style="margin:auto; display: block; text-align: center;">
+			<a class="button" href="{{page.pdf}}">Paper 📄</a>
+		</div>
+		<br/>
+	{% endif %}
+	<h2>Abstract</h2>
+	<p style="text-align: justify;">{{page.abstract}}</p>
+	<br/>
+	{% if page.video %}
+		
+		<h2>Project video</h2>
+		<iframe style="display: block; margin: auto; width: 100%; aspect-ratio: 16/9;"src="{{page.video}}"></iframe>
+		<br/>
+	{% endif %}
+
+	{{content}}
+</main>

@@ -1,0 +1,4 @@
+collections:
+  project:
+    output: true
+    permalink: /project/:path
