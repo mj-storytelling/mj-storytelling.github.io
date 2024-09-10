@@ -3,7 +3,16 @@ layout: default
 ---
 <header>
 	<h1>{{page.title}}</h1>
+		<div style="text-align: center;">
+			{% for author in page.authors %}
+				<!-- identify the author from members where "name" is same as author -->
+				{% assign authorObj = site.data.members | where: "name", author | first %}
+
+				<a class="person-name" href="{{authorObj.url}}">{{author}}</a>{% unless forloop.last %}, {% endunless %}
+			{% endfor %}
+		</div>
 </header>
+<br/>
 <main>
 	
 	{% if page.image %}

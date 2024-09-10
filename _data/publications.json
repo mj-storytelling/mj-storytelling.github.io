@@ -13,8 +13,6 @@
   "id": "chung2024patchview",
   "title": "Patchview: LLM-Powered Worldbuilding with Generative Dust and Magnet Visualization",
   "url": "/project/patchview",
-  "pdf": "https://mkremins.github.io/publications/Patchview_UIST2024.pdf",
-  "video": "https://drive.google.com/file/d/1Y5XcleOfkXhvA2bXRLET4Zt92bjOx7C_/view?usp=sharing",
   "authors": ["John Joon Young Chung", "Max Kreminski"],
   "year": "2024",
   "venue": "UIST",

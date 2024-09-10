@@ -1,6 +1,7 @@
 ---
 layout: project
 title: "Patchview: LLM-Powered Worldbuilding with Generative Dust and Magnet Visualization"
+authors: ["John Joon Young Chung", "Max Kreminski"]
 pdf: "https://mkremins.github.io/publications/Patchview_UIST2024.pdf"
 video: "https://drive.google.com/file/d/1Y5XcleOfkXhvA2bXRLET4Zt92bjOx7C_/preview?t=3"
 image: "/img/projects/patchview/teaser.gif"
