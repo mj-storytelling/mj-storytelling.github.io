@@ -46,11 +46,13 @@ layout: default
 					@ {{pub.parent_venue}}
 				{% endif %} 
 				{{pub.year}}
+				{%- if pub.pubtype == "demo" or pub.pubtype == "poster" -%}
+					{{pub.pubtype | prepend: " "}}.
+				{%- else -%}
+					.
+				{%- endif -%}
 			</span>
-			{% if pub.pubtype =="demo" or pub.pubtype=="poster" %}
-				{{pub.pubtype}}
-			{% endif %}
-		{% endif %}. 
+		{% endif %}
 		{% if pub.award and pub.award != "" %} 
 			<strong class="award">[{{pub.award | split: " (" | first}}.]</strong>
 		{% endif %}
