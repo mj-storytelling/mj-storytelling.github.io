@@ -1,5 +1,16 @@
 [
 {
+  "id": "chung2025toyteller",
+  "title": "Toyteller: AI-Powered Visual Storytelling Through Toy-Playing with Character Symbols",
+  "url": "https://arxiv.org/abs/2501.13284",
+  "authors": ["John Joon Young Chung", "Melissa Roemmele", "Max Kreminski"],
+  "year": "2025",
+  "venue": "CHI",
+  "venue_long": "ACM CHI Conference on Human Factors in Computing Systems",
+  "pubtype": "full",
+  "acceptrate": "25.1%"
+},
+{
   "id": "chung2024toyteller",
   "title": "Toyteller: Toy-Playing with Character Symbols for AI-Powered Visual Storytelling",
   "url": "https://mkremins.github.io/publications/Toyteller_UIST2024.pdf",
