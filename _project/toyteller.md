@@ -131,7 +131,7 @@ As Toyteller allows users to use both interaction approaches, we could observe u
 <img style="width: 50%" src="/img/projects/toyteller/mix1.png"><br/>
 <i style="font-size: 15px;">A case of mixing motion and natural language prompt inputs.</i>
 <br/><br/>
-We could also observe users flexibly dividing roles with AI in terms of which aspects of artifacts will be created by whon.
+We could also observe users flexibly dividing roles with AI in terms of which aspects of artifacts will be created by whom.
 <img style="width: 100%" src="/img/projects/toyteller/mix2.png"><br/>
 <i style="font-size: 15px;">Various cases of user dividing roles with AI.</i>
 <br/><br/>
