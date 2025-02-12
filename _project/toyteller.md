@@ -114,7 +114,45 @@ accuracy in classifying active characters (Character Correctness) and latency (C
 <i style="font-size: 15px;">For 3) <span style="color: royalblue"><b>proactive action+char2motion</b></span> and <span style="color: teal"><b>proactive action+char2motion</b></span>, we evaluated alignment between actions and motions, realism of the motion (e.g., the motion does not have drastic jitters), and latency.</i>
 </div>
 
-# Generation Samples
+# Generated Samples
+
+<div style="display: flex">
+  <div style="width: 30%; padding: 10px;">
+    <div><i>Input</i></div>
+    <div style="font-size: 15px;">Black - Paul <br/>White - Nolly (who dislike Paul)</div>
+    <img style="width: 100%;" src="/img/projects/toyteller/sample1.gif">
+  </div>
+  <div style="width: 70%; padding: 10px;">
+  <i>Output</i><br/>
+  As Paul tried to leave the party, Nolly, who disliked him intensely, began to loudly whisper his name, causing Paul to feel embarrassed and eventually forced to leave, effectively being chased away by Nolly's unwanted attention.
+  </div>
+</div>
+
+
+<div style="display: flex">
+  <div style="width: 30%; padding: 10px;">
+    <div><i>Input</i></div>
+    <div style="font-size: 15px;">Black - Lyra Novax <br/> White - Zephyr Astro</div>
+    <img style="width: 100%;" src="/img/projects/toyteller/sample2.gif">
+  </div>
+  <div style="width: 70%; padding: 10px;">
+  <i>Output</i><br/>
+  As the gravity generators sputtered to life, Lyra Novax leaned in close to Zephyr Astro's ear and whispered, "Zeph, I've got the hack in place, now let's get out of here before the security forces follow our trail."
+  </div>
+</div>
+
+
+<div style="display: flex">
+  <div style="width: 30%; padding: 10px;">
+    <div><i>Input</i></div>
+    <div style="font-size: 15px;">Black - Jack <br/> White - Amy</div>
+    <img style="width: 100%;" src="/img/projects/toyteller/sample3.gif">
+  </div>
+  <div style="width: 70%; padding: 10px;">
+  <i>Output</i><br/>
+  As Jack's fingers danced across the worn wooden keys, he passionately argued with Amy about the merits of their favorite novel, his words pouring out in a fervent plea to sway her opinion.
+  </div>
+</div>
 
 
 # User Study
