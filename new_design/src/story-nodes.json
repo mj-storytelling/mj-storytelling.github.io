@@ -1,0 +1,142 @@
+{
+    "nodes": [
+      {
+        "id": "start",
+        "text": "You see a patchwork sail capturing the winds of imagination.",
+        "style": "patchwork",
+        "choices": [
+          {
+            "text": "Follow the wind",
+            "nextNode": "woodcut_tale"
+          },
+          {
+            "text": "Find a harbor",
+            "nextNode": "pixel_coast"
+          }
+        ]
+      },
+      {
+        "id": "woodcut_tale",
+        "text": "Resilient lines cut through deep waves, ancient stories engraved on time's wooden boards.",
+        "style": "woodcut",
+        "choices": [
+          {
+            "text": "Venture into the unknown",
+            "nextNode": "pixel_stars"
+          },
+          {
+            "text": "Pursue the past",
+            "nextNode": "patchwork_memory"
+          }
+        ]
+      },
+      {
+        "id": "pixel_coast",
+        "text": "A coastline formed by blocks gradually becomes clear, each light point a fragment of memory.",
+        "style": "pixel",
+        "choices": [
+          {
+            "text": "Explore a new world",
+            "nextNode": "woodcut_history"
+          },
+          {
+            "text": "Reassemble memories",
+            "nextNode": "patchwork_craft"
+          }
+        ]
+      },
+      {
+        "id": "pixel_stars",
+        "text": "Starlight dances on the digital sea surface, each pixel mapping the mysteries of the universe.",
+        "style": "pixel",
+        "choices": [
+          {
+            "text": "Set sail again",
+            "nextNode": "start"
+          },
+          {
+            "text": "Dive deeper into the code",
+            "nextNode": "pixel_end"
+          }
+        ]
+      },
+      {
+        "id": "patchwork_memory",
+        "text": "Memories interweave like fabric scraps into a painting, each stitch narrating past voyages.",
+        "style": "patchwork",
+        "choices": [
+          {
+            "text": "Weave the future",
+            "nextNode": "patchwork_end"
+          },
+          {
+            "text": "Start anew",
+            "nextNode": "start"
+          }
+        ]
+      },
+      {
+        "id": "woodcut_history",
+        "text": "Soft fabric solidifies into hardwood, the story's contours becoming deep and clear.",
+        "style": "woodcut",
+        "choices": [
+          {
+            "text": "Preserve ancient methods",
+            "nextNode": "woodcut_end"
+          },
+          {
+            "text": "Continue the cycle",
+            "nextNode": "start"
+          }
+        ]
+      },
+      {
+        "id": "patchwork_craft",
+        "text": "Digital edges gradually soften, transforming into warm fabric and threads, memories sewn into every stitch.",
+        "style": "patchwork",
+        "choices": [
+          {
+            "text": "Embrace tradition",
+            "nextNode": "patchwork_end"
+          },
+          {
+            "text": "Seek new paths",
+            "nextNode": "start"
+          }
+        ]
+      },
+      {
+        "id": "pixel_end",
+        "text": "In the depths of the pixel world, you find the essence of the digital ocean, countless possibilities flowing between the grids.",
+        "style": "pixel",
+        "choices": [
+          {
+            "text": "Journey again",
+            "nextNode": "start"
+          }
+        ]
+      },
+      {
+        "id": "woodcut_end",
+        "text": "The power between black and white flows through the wood grain, you become the guardian of the story.",
+        "style": "woodcut",
+        "choices": [
+          {
+            "text": "A new journey",
+            "nextNode": "start"
+          }
+        ]
+      },
+      {
+        "id": "patchwork_end",
+        "text": "Fragments pieced together into a complete picture, you find belonging in the colorful fabric.",
+        "style": "patchwork",
+        "choices": [
+          {
+            "text": "Begin a new chapter",
+            "nextNode": "start"
+          }
+        ]
+      }
+    ]
+  }

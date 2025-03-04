@@ -6,13 +6,15 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
-	<title>Midjourney Storytelling Lab</title>
+	<title>{% if page.title %}{{ page.title }}{% else %}Midjourney Storytelling Lab{% endif %}</title>
+	<link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
 	<style>
 	* { box-sizing: border-box; margin: 0; padding: 0; }
 	body {
-		font-family: "Source Sans Pro", sans-serif; font-size: 18px; line-height: 1.5;
-		margin: 2rem auto; max-width: 94ch; padding: 0 2ch;
-	}
+    font-family: monospace; font-size: 18px; line-height: 1.5;
+    margin: 0; padding: 0;
+    background-color: #FDF9F3; 
+}
 	h1, h2 { margin-bottom: 1rem; }
 	a { color: blue; /*mediumblue;*/ }
 	h1 a { color: inherit; text-decoration: none; }
@@ -47,9 +49,142 @@
     border-radius: 10px;
     background-color: #f0f0f0;
   }
+  .cursor {
+    display: inline-block;
+    animation: blink 1s step-end infinite;
+    color: #2952a3;
+  }
+  
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
 	</style>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.9/dat.gui.min.js"></script>
 </head>
 <body>
-  {{ content }}
+	<div class="first-screen">
+		<div class="powered-by">Powered by Midjourney</div>
+		<div id="container">
+			<div id="cloud-container"></div>
+			<div id="ocean">
+				<div id="wave-container">
+					<div id="ascii-ocean"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="content-overlay">
+			<div class="header">
+				<div class="title-section">
+					<h1 class="main-title">Midjourney Storytelling Lab</h1>
+					<p class="subtitle"><span id="typing-text"></span><span class="cursor">_</span></p>
+				</div>
+
+				<div class="image-section">
+					<div class="message-box">
+						<p></p>
+						<div class="buttons">
+						</div>
+					</div>
+					<div class="boat-container">
+						<img src="{{ '/img/website/boat_patchwork.png' | relative_url }}" alt="sailing boat" class="boat-image">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="content-sections">
+		{{ content }}
+		
+
+		<footer class="site-footer">
+			<p>Powered by Midjourney</p>
+		</footer>
+	</div>
+
+
+	<script src="{{ '/assets/js/cloud-effect.js' | relative_url }}"></script>
+	<script src="{{ '/assets/js/ocean-config.js' | relative_url }}"></script>
+	<script src="{{ '/assets/js/ocean-effect.js' | relative_url }}"></script>
+	<script src="{{ '/assets/js/story-engine.js' | relative_url }}"></script>
+	<script type="module">
+		window.addEventListener('DOMContentLoaded', () => {
+			const asciiOceanElement = document.getElementById('ascii-ocean');
+
+			// ascii ocean effect
+			if (asciiOceanElement) {
+				const oceanEffect = new ASCIIOcean(asciiOceanElement);
+				initGUI();
+			} else {
+				console.error('cannot find ascii-ocean element');
+			}
+			
+			// scroll parallax effect
+			const firstScreen = document.querySelector('.first-screen');
+			const container = document.getElementById('container');
+			const ocean = document.getElementById('ocean');
+			const clouds = document.getElementById('cloud-container');
+			const boat = document.querySelector('.boat-container');
+			const imageSection = document.querySelector('.image-section');
+			
+			// store initial position information
+			const initialPositions = {
+				boatBottom: boat ? boat.getBoundingClientRect().bottom : 0,
+				oceanTop: ocean ? ocean.getBoundingClientRect().top : 0
+			};
+			
+			window.addEventListener('scroll', () => {
+				// ensure elements exist
+				if (firstScreen && container) {
+					// get scroll position
+					const scrollY = window.scrollY;
+					
+					// if still in the first screen, apply parallax effect
+					if (scrollY <= firstScreen.offsetHeight) {
+						// movement rate
+						const oceanRate = 0.3;
+						const cloudRate = 0.5;
+						const containerRate = 0.1;
+						
+						// ocean and boat move together, using the same rate
+						if (ocean) {
+							ocean.style.transform = `translateY(${scrollY * oceanRate}px)`;
+						}
+						
+						if (boat) {
+							imageSection.style.transform = `translateY(${scrollY * oceanRate}px)`;
+						}
+						
+						// clouds move faster
+						if (clouds) {
+							clouds.style.transform = `translateY(${scrollY * cloudRate}px)`;
+						}
+						
+						// container moves slightly
+						container.style.transform = `translateY(${scrollY * containerRate}px)`;
+					}
+				}
+			});
+
+			// typing effect
+			const text = "Building expressive, approachable, and controllable tools for AI-supported storytelling";
+			const typingTextElement = document.getElementById('typing-text');
+			let charIndex = 0;
+			const typingSpeed = 20; // milliseconds per character
+			
+			function typeText() {
+				if (charIndex < text.length) {
+					typingTextElement.textContent += text.charAt(charIndex);
+					charIndex++;
+					setTimeout(typeText, typingSpeed);
+				}
+			}
+			
+			// start typing effect
+			typeText();
+		});
+	</script>
 </body>
 </html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midjourney Storytelling Lab</title>
+    <link rel="stylesheet" href="./src/styles.css">
+    <style>
+        .cursor {
+            display: inline-block;
+            animation: blink 1s step-end infinite;
+            color: #2952a3;
+        }
+        
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.9/dat.gui.min.js"></script>
+</head>
+
+<body>
+    <!-- a container for the first screen -->
+    <div class="first-screen">
+        <div class="powered-by">Powered by Midjourney</div>
+        <div id="container">
+            <div id="cloud-container"></div>
+            <div id="ocean">
+                <div id="wave-container">
+                    <div id="ascii-ocean"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- content -->
+        <div class="content-overlay">
+            <div class="header">
+                <div class="title-section">
+                    <h1 class="main-title">Midjourney Storytelling Lab</h1>
+                    <p class="subtitle"><span id="typing-text"></span><span class="cursor">_</span></p>
+                </div>
+
+                <div class="image-section">
+                    <div class="message-box">
+                        <p></p>
+                        <div class="buttons">
+                            <!-- buttons will be generated dynamically -->
+                        </div>
+                    </div>
+                    <div class="boat-container">
+                        <img src="img/boat_patchwork.png" alt="sailing boat" class="boat-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- scrollable content area -->
+    <div class="content-sections">
+        <section class="lab-intro-section">
+            <h2 class="section-title">About Our Lab</h2>
+            <div class="intro-content">
+                <p class="intro-text">We're a small group of researchers at <a href="#">Midjourney</a> building expressive, approachable, and controllable tools for AI-supported storytelling. Current lab projects focus on collaborative worldbuilding, comics generation, and new interaction techniques for steering the generation of story text.</p>
+
+                <p class="intro-text">Recent work by lab members has been published at HCI and AI conferences including <a href="#">CHI</a>, <a href="#">UIST</a>, <a href="#">IUI</a>, <a href="#">C&C</a>, and <a href="#">ACL</a>.</p>
+            </div>
+            <img src="img/logo.svg" alt="Lab Logo" class="lab-logo">
+        </section>
+
+        <!-- lab members -->
+        <section class="lab-members-section">
+            <h2 class="section-title">Lab Members</h2>
+            <div class="members-grid">
+                <!-- member card -->
+                <div class="member-card">
+                    <div class="member-avatar">
+                        <img src="img/members/max.jpeg" alt="Lab Member">
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Max Kreminski</h3>
+                        <p class="member-title">Research Scientist and Director</p>
+                    </div>
+                </div>
+                <!-- more member cards -->
+                <div class="member-card">
+                    <div class="member-avatar">
+                        <img src="img/members/max.jpeg" alt="Lab Member">
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Max Kreminski</h3>
+                        <p class="member-title">Research Scientist and Director</p>
+                    </div>
+                </div>
+                <!-- more member cards -->
+                <div class="member-card">
+                    <div class="member-avatar">
+                        <img src="img/members/max.jpeg" alt="Lab Member">
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Max Kreminski</h3>
+                        <p class="member-title">Research Scientist and Director</p>
+                    </div>
+                </div>
+                <div class="member-card">
+                    <div class="member-avatar">
+                        <img src="img/members/max.jpeg" alt="Lab Member">
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Max Kreminski</h3>
+                        <p class="member-title">Research Scientist and Director</p>
+                    </div>
+                </div>
+                <!-- more member cards -->  
+                <div class="member-card">
+                    <div class="member-avatar">
+                        <img src="img/members/max.jpeg" alt="Lab Member">
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Max Kreminski</h3>
+                        <p class="member-title">Research Scientist and Director</p>
+                    </div>
+                </div>
+                <div class="member-card">
+                    <div class="member-avatar">
+                        <img src="img/members/max.jpeg" alt="Lab Member">
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Max Kreminski</h3>
+                        <p class="member-title">Research Scientist and Director</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- projects -->
+        <section class="projects-section">
+            <h2 class="section-title">Selected Projects</h2>
+            <div class="projects-list">
+                <!-- project card -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="img/projects/toyteller.gif" alt="Project Image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Toyteller: AI-Powered Visual Storytelling Through Toy-Playing with Character Symbols</h3>
+                        <p class="project-description">A novel AI-based interface for playful storytelling: users steer the generation of story text by physically acting out a scene with abstract shapes, as if playing with toys!</p>
+                        <div class="project-meta">
+                            <div class="project-tags">
+                                <span class="tag">📄 Papers: CHI 2023, UIST 2024</span>
+                                <span class="tag">🗣 Talks: South Park Commons</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- more project cards -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="img/projects/patchview.gif" alt="Project Image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Toyteller: AI-Powered Visual Storytelling Through Toy-Playing with Character Symbols</h3>
+                        <p class="project-description">A novel AI-based interface for playful storytelling: users steer the generation of story text by physically acting out a scene with abstract shapes, as if playing with toys!</p>
+                        <div class="project-meta">
+                            <div class="project-tags">
+                                <span class="tag">📄 Papers: CHI 2023, UIST 2024</span>
+                                <span class="tag">🗣 Talks: South Park Commons</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- more project cards -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="img/projects/patchview.gif" alt="Project Image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Toyteller: AI-Powered Visual Storytelling Through Toy-Playing with Character Symbols</h3>
+                        <p class="project-description">A novel AI-based interface for playful storytelling: users steer the generation of story text by physically acting out a scene with abstract shapes, as if playing with toys!</p>
+                        <div class="project-meta">
+                            <div class="project-tags">
+                                <span class="tag">📄 Papers: CHI 2023, UIST 2024</span>
+                                <span class="tag">🗣 Talks: South Park Commons</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- footer -->
+        <footer class="site-footer">
+            <p>Powered by Midjourney</p>
+        </footer>
+    </div>
+
+    <!-- scripts -->
+    <script src="./src/cloud-effect.js"></script>
+    <script src="./src/ocean-config.js"></script>
+    <script src="./src/ocean-effect.js"></script>
+    <script src="./src/story-engine.js"></script>
+    <script type="module">
+        window.addEventListener('DOMContentLoaded', () => {
+            const asciiOceanElement = document.getElementById('ascii-ocean');
+
+            // create ASCII ocean effect
+            if (asciiOceanElement) {
+                const oceanEffect = new ASCIIOcean(asciiOceanElement);
+                initGUI();
+            } else {
+                console.error('cannot find ascii-ocean element');
+            }
+            
+            // add scroll parallax effect
+            const firstScreen = document.querySelector('.first-screen');
+            const container = document.getElementById('container');
+            const ocean = document.getElementById('ocean');
+            const clouds = document.getElementById('cloud-container');
+            const boat = document.querySelector('.boat-container');
+            const imageSection = document.querySelector('.image-section');
+            
+            // store initial position information
+            const initialPositions = {
+                boatBottom: boat ? boat.getBoundingClientRect().bottom : 0,
+                oceanTop: ocean ? ocean.getBoundingClientRect().top : 0
+            };
+            
+            // calculate the initial gap between the boat bottom and the ocean top
+            const boatOceanGap = initialPositions.boatBottom - initialPositions.oceanTop;
+            
+            window.addEventListener('scroll', () => {
+                // ensure elements exist
+                if (firstScreen && container) {
+                    // get scroll position
+                    const scrollY = window.scrollY;
+                    
+                    // if still in the first screen, apply parallax effect
+                    if (scrollY <= firstScreen.offsetHeight) {
+                        // movement rates
+                        const oceanRate = 0.3;
+                        const cloudRate = 0.5;
+                        const containerRate = 0.1;
+                        
+                        // ocean and boat move together, using the same rate
+                        if (ocean) {
+                            ocean.style.transform = `translateY(${scrollY * oceanRate}px)`;
+                        }
+                        
+                        // ensure boat and ocean move at the same rate
+                        if (boat) {
+                            imageSection.style.transform = `translateY(${scrollY * oceanRate}px)`;
+                        }
+                        
+                        // clouds move faster
+                        if (clouds) {
+                            clouds.style.transform = `translateY(${scrollY * cloudRate}px)`;
+                        }
+                        
+                        // container moves slightly
+                        container.style.transform = `translateY(${scrollY * containerRate}px)`;
+                    }
+                }
+            });
+
+            // add typing effect code
+            const text = "Building expressive, approachable, and controllable tools for AI-supported storytelling";
+            const typingTextElement = document.getElementById('typing-text');
+            let charIndex = 0;
+            const typingSpeed = 20; // typing speed, milliseconds per character
+            
+            function typeText() {
+                if (charIndex < text.length) {
+                    typingTextElement.textContent += text.charAt(charIndex);
+                    charIndex++;
+                    setTimeout(typeText, typingSpeed);
+                }
+            }
+            
+            // start typing effect
+            typeText();
+        });
+    </script>
+</body>
+
+</html>

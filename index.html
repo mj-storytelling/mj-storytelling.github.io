@@ -2,62 +2,74 @@
 title: Midjourney Storytelling Lab
 layout: default
 ---
-<header>
-	<h1><a href="/">Midjourney Storytelling Lab</a></h1>
-</header>
-<main>
-	<section>
-		<!--<h2>About</h2>-->
-		<p>We’re a small group of researchers at <a href="https://www.midjourney.com">Midjourney</a> building expressive, approachable, and controllable tools for AI-supported storytelling. Current lab projects focus on collaborative worldbuilding, comics generation, and new interaction techniques for steering the generation of story text. Recent work by lab members has been published at HCI and AI conferences including <a href="https://dl.acm.org/conference/chi">CHI</a>, <a href="https://dl.acm.org/conference/uist">UIST</a>, <a href="https://dl.acm.org/conference/iui">IUI</a>, <a href="https://dl.acm.org/conference/c-n-c">C&C</a>, and <a href="https://aclanthology.org/venues/acl">ACL</a>.</p>
-	</section>
-	<section>
-		<h2>Lab Members</h2>
-		<div class="people">
-			{%- for person in site.data.members -%}
-			{%- unless person.hidden -%}
-			<div class="person">
-				<div class="portrait" style="background-image:url({{person.portrait}})"></div>
-				<div class="info">
-					<div class="name"><a href="{{person.url}}">{{person.name}}</a></div>
-					<div class="role">{{person.role}}{%- if person.term -%}<br><em>({{person.term}})</em>{%- endif -%}</div>
+<section class="lab-intro-section">
+	<h2 class="section-title">About Our Lab</h2>
+	<div class="intro-content">
+		<p class="intro-text">We're a small group of researchers at <a href="https://www.midjourney.com">Midjourney</a> building expressive, approachable, and controllable tools for AI-supported storytelling. Current lab projects focus on collaborative worldbuilding, comics generation, and new interaction techniques for steering the generation of story text.</p>
+
+		<p class="intro-text">Recent work by lab members has been published at HCI and AI conferences including <a href="https://dl.acm.org/conference/chi">CHI</a>, <a href="https://dl.acm.org/conference/uist">UIST</a>, <a href="https://dl.acm.org/conference/iui">IUI</a>, <a href="https://dl.acm.org/conference/c-n-c">C&C</a>, and <a href="https://aclanthology.org/venues/acl">ACL</a>.</p>
+	</div>
+	<img src="{{ '/img/website/logo.svg' | relative_url }}" alt="Lab Logo" class="lab-logo">
+</section>
+
+<section class="lab-members-section">
+	<h2 class="section-title">Lab Members</h2>
+	<div class="members-grid">
+		{%- for person in site.data.members -%}
+		{%- unless person.hidden -%}
+		<div class="member-card">
+			<div class="member-avatar">
+				<img src="{{person.portrait}}" alt="{{person.name}}">
+			</div>
+			<div class="member-info">
+				<h3 class="member-name"><a href="{{person.url}}">{{person.name}}</a></h3>
+				<p class="member-title">{{person.role}}{%- if person.term -%}<br><em>({{person.term}})</em>{%- endif -%}</p>
+			</div>
+		</div>
+		{%- endunless -%}
+		{%- endfor -%}
+	</div>
+</section>
+
+<section class="projects-section">
+	<h2 class="section-title">Selected Projects</h2>
+	<div class="projects-list">
+		{%- for pub in site.data.publications -%}
+		<div class="project-card">
+			<div class="project-content">
+				<h3 class="project-title">{% if pub.url and pub.url != "" %}<a href="{{pub.url}}">{{pub.title}}</a>{% else %}{{pub.title}}{% endif %}</h3>
+				<p class="project-description">
+					<span class="author">{{pub.authors | join: "</span>, <span class='author'>"}}</span>.
+					{% if pub.pubtype == "chapter" %}
+						In <em>{{pub.booktitle}}</em>
+					{% elsif pub.pubtype == "other" and pub.venue_note == "doctoral consortium paper" %}
+						{{pub.venue}} {{pub.year}}
+					{% elsif pub.pubtype == "journal" or pub.pubtype == "other" %}
+						{{pub.venue}}
+					{% else %}
+						<span class="venue">
+							{{pub.venue}}
+							{% if pub.parent_venue %} 
+								@ {{pub.parent_venue}}
+							{% endif %} 
+							{{pub.year}}
+							{%- if pub.pubtype == "demo" or pub.pubtype == "poster" -%}
+								{{pub.pubtype | prepend: " "}}.
+							{%- else -%}
+								.
+							{%- endif -%}
+						</span>
+					{% endif %}
+				</p>
+				<div class="project-meta">
+					<div class="project-tags">
+						{% if pub.award and pub.award != "" %} 
+							<span class="tag">[{{pub.award | split: " (" | first}}]</span>
+						{% endif %}
+					</div>
 				</div>
 			</div>
-			{%- endunless -%}
-			{%- endfor -%}
 		</div>
-	</section>
-	<section>
-		<h2>Selected Publications</h2>
-		<ul class="pubs">
-		{%- for pub in site.data.publications -%}
-		<li class="pub">
-		<div class="title">{% if pub.url and pub.url != "" %}<a href="{{pub.url}}">{{pub.title}}</a>{% else %}{{pub.title}}{% endif %}</div>
-		<span class="author">{{pub.authors | join: "</span>, <span class='author'>"}}</span>.
-		{% if pub.pubtype == "chapter" %}
-			In <em>{{pub.booktitle}}</em>
-		{% elsif pub.pubtype == "other" and pub.venue_note == "doctoral consortium paper" %}
-			{{pub.venue}} {{pub.year}}
-		{% elsif pub.pubtype == "journal" or pub.pubtype == "other" %}
-			{{pub.venue}}
-		{% else %}
-			<span class="venue">
-				{{pub.venue}}
-				{% if pub.parent_venue %} 
-					@ {{pub.parent_venue}}
-				{% endif %} 
-				{{pub.year}}
-				{%- if pub.pubtype == "demo" or pub.pubtype == "poster" -%}
-					{{pub.pubtype | prepend: " "}}.
-				{%- else -%}
-					.
-				{%- endif -%}
-			</span>
-		{% endif %}
-		{% if pub.award and pub.award != "" %} 
-			<strong class="award">[{{pub.award | split: " (" | first}}.]</strong>
-		{% endif %}
-		</li>
 		{%- endfor -%}
-		</ul>
-	</section>
-</main>
+	</div>
+</section>
