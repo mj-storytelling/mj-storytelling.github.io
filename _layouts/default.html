@@ -63,6 +63,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.9/dat.gui.min.js"></script>
 </head>
 <body>
+	{% if page.layout != "project" %}
 	<div class="first-screen">
 		<div class="powered-by">Powered by Midjourney</div>
 		<div id="container">
@@ -94,6 +95,7 @@
 			</div>
 		</div>
 	</div>
+	{% endif %}
 	
 	<div class="content-sections">
 		{{ content }}
@@ -111,6 +113,7 @@
 	<script src="{{ '/assets/js/story-engine.js' | relative_url }}"></script>
 	<script type="module">
 		window.addEventListener('DOMContentLoaded', () => {
+			{% if page.layout != "project" %}
 			const asciiOceanElement = document.getElementById('ascii-ocean');
 
 			// ascii ocean effect
@@ -184,6 +187,7 @@
 			
 			// start typing effect
 			typeText();
+			{% endif %}
 		});
 	</script>
 </body>
