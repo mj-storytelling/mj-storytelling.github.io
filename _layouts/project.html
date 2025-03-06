@@ -1,6 +1,36 @@
 ---
 layout: default
 ---
+<style>
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--primary-dark);
+  }
+  
+  h2 {
+    padding-bottom: 0.5rem;
+    display: inline-block;
+  }
+  
+  a.button {
+    background-color: var(--primary-color);
+    color: #FDF9F3;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    text-align: center;
+    font-family: monospace;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+  }
+  
+  a.button:hover {
+    background-color: #FDF9F3;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+  }
+</style>
+
 <header>
 	<h1>{{page.title}}</h1>
 		<div style="text-align: center;">

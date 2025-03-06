@@ -42,9 +42,12 @@ layout: default
 		
 		<div class="project-parent-card {% if related_children.size > 0 %}has-children{% endif %}">
 			<div class="project-parent-header">
-				<div class="project-parent-image">
+				<div class="project-parent-image {% if pub.hover_image %}has-hover-image{% endif %}">
 					{% if pub.cover_image %}
-					<img src="{{ pub.cover_image }}" alt="{{ pub.title }}">
+					<img class="project-image-static" src="{{ pub.cover_image }}" alt="{{ pub.title }}">
+					{% if pub.hover_image %}
+					<img class="project-image-hover" src="{{ pub.hover_image }}" alt="{{ pub.title }} (animated)">
+					{% endif %}
 					{% else %}
 					<div class="placeholder-image"></div>
 					{% endif %}
@@ -70,9 +73,12 @@ layout: default
 				<div class="children-label">Related Publications</div>
 				{% for child in related_children %}
 				<div class="project-child-card">
-					<div class="project-child-image">
+					<div class="project-child-image {% if child.hover_image %}has-hover-image{% endif %}">
 						{% if child.cover_image %}
-						<img src="{{ child.cover_image }}" alt="{{ child.title }}">
+						<img class="project-image-static" src="{{ child.cover_image }}" alt="{{ child.title }}">
+						{% if child.hover_image %}
+						<img class="project-image-hover" src="{{ child.hover_image }}" alt="{{ child.title }} (animated)">
+						{% endif %}
 						{% else %}
 						<div class="placeholder-image"></div>
 						{% endif %}

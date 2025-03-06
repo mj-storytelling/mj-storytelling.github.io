@@ -785,3 +785,38 @@ body {
       font-size: 0.75rem;
     }
   }
+
+  .project-parent-image, .project-child-image {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .project-image-static, .project-image-hover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .project-image-hover {
+    opacity: 0;
+  }
+
+  .project-parent-card:hover .has-hover-image .project-image-static {
+    opacity: 0;
+  }
+
+  .project-parent-card:hover .has-hover-image .project-image-hover {
+    opacity: 1;
+  }
+
+  .project-child-card:hover .has-hover-image .project-image-static {
+    opacity: 0;
+  }
+
+  .project-child-card:hover .has-hover-image .project-image-hover {
+    opacity: 1;
+  }

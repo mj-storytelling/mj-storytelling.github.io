@@ -7,16 +7,16 @@
     "Melissa Roemmele",
     "Max Kreminski"
   ],
-  "cover_image": "/img/projects/project-cover.png",
-  "hover_image": "/img/projects/project-hover.gif",
-  "summary": "a super cool and clear description of the project here",
+  "cover_image": "/img/covers/patchwork_still.png",
+  "hover_image": "/img/covers/patchwork_anim.gif",
+  "summary": "A collaborative, AI-supported infinite canvas for creating fictional worlds.",
   "links": [
     {
-      "text": "Available now!",
+      "text": "🎨 Available now!",
       "url": "https://patchwork.midjourney.com/"
     },
     {
-      "text": "Blog post",
+      "text": "📝 Blog post",
       "url": "https://updates.midjourney.com/patchwork-user-guide/"
     }
   ]
@@ -35,16 +35,16 @@
     "venue_long": "ACM CHI Conference on Human Factors in Computing Systems",
     "pubtype": "full",
     "acceptrate": "25.1%",
-    "cover_image": "/img/projects/project-cover.png",
-    "hover_image": "/img/projects/project-hover.gif",
-    "summary": "CHI 2025 Full Paper",
+    "cover_image": "/img/covers/toyteller_still.png",
+    "hover_image": "/img/covers/toyteller_anim.gif",
+    "summary": "A novel AI-based interface for playful storytelling: users steer the generation of story text by physically acting out a scene with abstract shapes, as if playing with toys.",
     "links": [
       {
-        "text": "Blog post",
+        "text": "📝 Blog post",
         "url": "/project/toyteller"
       },
       {
-        "text": "CHI 2025 Full Paper",
+        "text": "📄 CHI 2025 Full Paper",
         "url": "https://arxiv.org/abs/2501.13284"
       }
     ]
@@ -63,10 +63,32 @@
     "venue_long": "ACM Symposium on User Interface Software and Technology",
     "pubtype": "demo",
     "parent_project_id": "chung2025toyteller",
-    "cover_image": "/img/projects/project-cover.png",
-    "hover_image": "/img/projects/project-hover.gif",
+    "cover_image": "/img/covers/toyteller_still.png",
     "summary": "UIST 2024 Demo",
     "links": [
+    ]
+  },
+  {
+    "id": "sun2025dramallama",
+    "title": "Drama Llama: An LLM-Powered Storylets Framework for Authorable Responsiveness in Interactive Narrative",
+    "url": "https://arxiv.org/abs/2501.09099",
+    "authors": [
+      "Yuqian Sun",
+      "Phoebe J. Wang", 
+      "John Joon Young Chung",
+      "Melissa Roemmele",
+      "Taewook Kim",
+      "Max Kreminski"
+    ],
+    "year": "2024",
+    "pubtype": "short",
+    "cover_image": "/img/covers/drama_still.png",
+    "summary": "An LLM-powered storylets framework that supports the authoring of responsive, open-ended interactive stories.",
+    "links": [
+      {
+        "text": "📄 Paper",
+        "url": "https://arxiv.org/abs/2501.09099"
+      }
     ]
   },
   {
@@ -82,16 +104,16 @@
     "venue_long": "ACM Symposium on User Interface Software and Technology",
     "pubtype": "full",
     "acceptrate": "24%",
-    "cover_image": "/img/projects/project-cover.png",
-    "hover_image": "/img/projects/project-hover.gif",
-    "summary": "a super cool and clear description of the project here",
+    "cover_image": "/img/covers/patchview_still.png",
+    "hover_image": "/img/covers/patchview_anim.gif",
+    "summary": "A customizable LLM-powered system that visually aids worldbuilding by allowing users to interact with story concepts and elements through the physical metaphor of magnets and dust.",
     "links": [
       {
-        "text": "Blog post",
+        "text": "📝 Blog post",
         "url": "/project/patchview"
       },
       {
-        "text": "UIST 2024 Paper",
+        "text": "📄 UIST 2024 Paper",
         "url": "https://dl.acm.org/doi/10.1145/3654777.3676352"
       }
     ]
@@ -113,9 +135,14 @@
     "venue_long": "ACM CHI Conference on Human Factors in Computing Systems",
     "pubtype": "full",
     "acceptrate": "26.3%",
-    "cover_image": "/img/projects/project-cover.png",
-    "hover_image": "/img/projects/project-hover.gif",
-    "summary": "a super cool and clear description of the project here",  
+    "cover_image": "/img/covers/writing_still.png",
+    "summary": "A research addressing the fragmentation across writing assistant technologies by developing a structured design space through systematic review across five key dimensions: task, user, technology, interaction, and ecosystem.",  
+    "links": [
+      {
+        "text": "📄 CHI 2024 Full Paper",
+        "url": "https://arxiv.org/abs/2403.14117"
+      }
+    ]
   },
   {
     "id": "kreminski2024intent",
@@ -131,8 +158,7 @@
     "venue_long": "IUI Workshop on Human-AI Co-Creation with Generative Models",
     "parent_venue": "IUI",
     "pubtype": "workshop",
-    "cover_image": "/img/projects/project-cover.png",
-    "hover_image": "/img/projects/project-hover.gif",
-    "summary": "IUI HAI-GEN paper"
+    "cover_image": "/img/covers/intent_still.png",
+    "summary": "📄 IUI HAI-GEN paper"
   }
 ]
