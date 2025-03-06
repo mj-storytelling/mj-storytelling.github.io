@@ -1,56 +1,138 @@
-[
-{
-  "id": "chung2025toyteller",
-  "title": "Toyteller: AI-Powered Visual Storytelling Through Toy-Playing with Character Symbols",
-  "url": "/project/toyteller",
-  "authors": ["John Joon Young Chung", "Melissa Roemmele", "Max Kreminski"],
-  "year": "2025",
-  "venue": "CHI",
-  "venue_long": "ACM CHI Conference on Human Factors in Computing Systems",
-  "pubtype": "full",
-  "acceptrate": "25.1%"
+[{
+  "id": "patchwork2025",
+  "title": "Patchwork",
+  "url": "/project/patchwork",
+  "authors": [
+    "John Joon Young Chung",
+    "Melissa Roemmele",
+    "Max Kreminski"
+  ],
+  "cover_image": "/img/projects/project-cover.png",
+  "hover_image": "/img/projects/project-hover.gif",
+  "summary": "a super cool and clear description of the project here",
+  "links": [
+    {
+      "text": "Available now!",
+      "url": "https://patchwork.midjourney.com/"
+    },
+    {
+      "text": "Blog post",
+      "url": "https://updates.midjourney.com/patchwork-user-guide/"
+    }
+  ]
 },
-{
-  "id": "chung2024toyteller",
-  "title": "Toyteller: Toy-Playing with Character Symbols for AI-Powered Visual Storytelling",
-  "url": "https://mkremins.github.io/publications/Toyteller_UIST2024.pdf",
-  "authors": ["John Joon Young Chung", "Melissa Roemmele", "Max Kreminski"],
-  "year": "2024",
-  "venue": "UIST",
-  "venue_long": "ACM Symposium on User Interface Software and Technology",
-  "pubtype": "demo",
-},
-{
-  "id": "chung2024patchview",
-  "title": "Patchview: LLM-Powered Worldbuilding with Generative Dust and Magnet Visualization",
-  "url": "/project/patchview",
-  "authors": ["John Joon Young Chung", "Max Kreminski"],
-  "year": "2024",
-  "venue": "UIST",
-  "venue_long": "ACM Symposium on User Interface Software and Technology",
-  "pubtype": "full",
-  "acceptrate": "24%",
-},
-{
-  "id": "lee2024design",
-  "title": "A Design Space for Intelligent and Interactive Writing Assistants",
-  "url": "https://arxiv.org/abs/2403.14117",
-  "authors": ["Mina Lee", "Katy Ilonka Gero", "John Joon Young Chung", "<em>27 others</em>", "Max Kreminski", "<em>5 others</em>"],
-  "year": "2024",
-  "venue": "CHI",
-  "venue_long": "ACM CHI Conference on Human Factors in Computing Systems",
-  "pubtype": "full",
-  "acceptrate": "26.3%",
-},
-{
-  "id": "kreminski2024intent",
-  "title": "Intent Elicitation in Mixed-Initiative Co-Creativity",
-  "url": "https://mkremins.github.io/publications/Patchwork_HAI-GEN2024.pdf",
-  "authors": ["Max Kreminski", "John Joon Young Chung"],
-  "year": "2024",
-  "venue": "HAI-GEN",
-  "venue_long": "IUI Workshop on Human-AI Co-Creation with Generative Models",
-  "parent_venue": "IUI",
-  "pubtype": "workshop"
-},
+  {
+    "id": "chung2025toyteller",
+    "title": "Toyteller: AI-Powered Visual Storytelling Through Toy-Playing with Character Symbols",
+    "url": "/project/toyteller",
+    "authors": [
+      "John Joon Young Chung",
+      "Melissa Roemmele",
+      "Max Kreminski"
+    ],
+    "year": "2025",
+    "venue": "CHI",
+    "venue_long": "ACM CHI Conference on Human Factors in Computing Systems",
+    "pubtype": "full",
+    "acceptrate": "25.1%",
+    "cover_image": "/img/projects/project-cover.png",
+    "hover_image": "/img/projects/project-hover.gif",
+    "summary": "CHI 2025 Full Paper",
+    "links": [
+      {
+        "text": "Blog post",
+        "url": "/project/toyteller"
+      },
+      {
+        "text": "CHI 2025 Full Paper",
+        "url": "https://arxiv.org/abs/2501.13284"
+      }
+    ]
+  },
+  {
+    "id": "chung2024toyteller",
+    "title": "Toyteller: Toy-Playing with Character Symbols for AI-Powered Visual Storytelling",
+    "url": "https://mkremins.github.io/publications/Toyteller_UIST2024.pdf",
+    "authors": [
+      "John Joon Young Chung",
+      "Melissa Roemmele",
+      "Max Kreminski"
+    ],
+    "year": "2024",
+    "venue": "UIST",
+    "venue_long": "ACM Symposium on User Interface Software and Technology",
+    "pubtype": "demo",
+    "parent_project_id": "chung2025toyteller",
+    "cover_image": "/img/projects/project-cover.png",
+    "hover_image": "/img/projects/project-hover.gif",
+    "summary": "UIST 2024 Demo",
+    "links": [
+    ]
+  },
+  {
+    "id": "chung2024patchview",
+    "title": "Patchview: LLM-Powered Worldbuilding with Generative Dust and Magnet Visualization",
+    "url": "/project/patchview",
+    "authors": [
+      "John Joon Young Chung",
+      "Max Kreminski"
+    ],
+    "year": "2024",
+    "venue": "UIST",
+    "venue_long": "ACM Symposium on User Interface Software and Technology",
+    "pubtype": "full",
+    "acceptrate": "24%",
+    "cover_image": "/img/projects/project-cover.png",
+    "hover_image": "/img/projects/project-hover.gif",
+    "summary": "a super cool and clear description of the project here",
+    "links": [
+      {
+        "text": "Blog post",
+        "url": "/project/patchview"
+      },
+      {
+        "text": "UIST 2024 Paper",
+        "url": "https://dl.acm.org/doi/10.1145/3654777.3676352"
+      }
+    ]
+  },
+  {
+    "id": "lee2024design",
+    "title": "A Design Space for Intelligent and Interactive Writing Assistants",
+    "url": "https://arxiv.org/abs/2403.14117",
+    "authors": [
+      "Mina Lee",
+      "Katy Ilonka Gero",
+      "John Joon Young Chung",
+      "<em>27 others</em>",
+      "Max Kreminski",
+      "<em>5 others</em>"
+    ],
+    "year": "2024",
+    "venue": "CHI",
+    "venue_long": "ACM CHI Conference on Human Factors in Computing Systems",
+    "pubtype": "full",
+    "acceptrate": "26.3%",
+    "cover_image": "/img/projects/project-cover.png",
+    "hover_image": "/img/projects/project-hover.gif",
+    "summary": "a super cool and clear description of the project here",  
+  },
+  {
+    "id": "kreminski2024intent",
+    "title": "Intent Elicitation in Mixed-Initiative Co-Creativity",
+    "url": "https://mkremins.github.io/publications/Patchwork_HAI-GEN2024.pdf",
+    "authors": [
+      "Max Kreminski",
+      "John Joon Young Chung"
+    ],
+    "parent_project_id": "patchwork2025",
+    "year": "2024",
+    "venue": "HAI-GEN",
+    "venue_long": "IUI Workshop on Human-AI Co-Creation with Generative Models",
+    "parent_venue": "IUI",
+    "pubtype": "workshop",
+    "cover_image": "/img/projects/project-cover.png",
+    "hover_image": "/img/projects/project-hover.gif",
+    "summary": "IUI HAI-GEN paper"
+  }
 ]
