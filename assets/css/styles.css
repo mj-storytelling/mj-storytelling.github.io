@@ -119,6 +119,7 @@ body {
     z-index: 10;
     font-size: 16px;
     transition: opacity 0.3s ease;
+    opacity: 0;
   }
   
   .message-box p {
@@ -257,7 +258,7 @@ body {
   }
   
   .cloud-row {
-    color: #5b79c3;
+    color: #88b7f1;
     font-family: 'Courier New', monospace;
     letter-spacing: 2px;
     line-height: 1.5em !important;

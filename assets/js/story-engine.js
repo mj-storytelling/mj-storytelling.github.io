@@ -15,6 +15,8 @@ class StoryEngine {
       pixel: 'img/website/boat_pixel.png'
     };
     
+    this.messageBoxContainer.style.opacity = 0;
+    
     this.init();
   }
   
@@ -184,11 +186,20 @@ class StoryEngine {
     
     this.currentNode = node;
     
-    // update text content
-    this.updateMessageText(node.text);
-    
-    // update button options
-    this.updateChoiceButtons(node.choices);
+    if (this.isInitialLoad) {
+      // first load
+      this.messageBox.textContent = node.text;
+      this.updateChoiceButtonsWithoutAnimation(node.choices);
+      
+      // delay showing the message box to ensure content is loaded
+      setTimeout(() => {
+        this.messageBoxContainer.style.opacity = 1;
+      }, 300);
+    } else {
+      // navigate using animation
+      this.updateMessageText(node.text);
+      this.updateChoiceButtons(node.choices);
+    }
     
     // update boat style
     this.updateBoatStyle(node.style);
@@ -221,6 +232,18 @@ class StoryEngine {
       
       this.buttonsContainer.style.opacity = 1;
     }, 300);
+  }
+  
+  updateChoiceButtonsWithoutAnimation(choices) {
+    this.buttonsContainer.innerHTML = '';
+    
+    choices.forEach(choice => {
+      const button = document.createElement('button');
+      button.className = 'action-button';
+      button.textContent = choice.text + ' >';
+      button.addEventListener('click', () => this.navigateToNode(choice.nextNode));
+      this.buttonsContainer.appendChild(button);
+    });
   }
   
   updateBoatStyle(style) {
