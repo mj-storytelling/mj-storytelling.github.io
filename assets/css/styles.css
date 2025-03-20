@@ -78,6 +78,7 @@ body {
     text-align: left;
     max-width: 50%;
     padding-left: 14%;
+    transform-origin: top left;
   }
   
   .main-title {
@@ -99,13 +100,14 @@ body {
 
   .image-section {
     position: absolute;
-    top: 24%;  
+    bottom: 6%; 
     right: 0;  
     padding-right: 8%;
     display: flex;
     justify-content: flex-end;
     z-index: 3;
     transform: none;
+    transform-origin: bottom right;
   }
 
   .message-box {

@@ -152,6 +152,7 @@
 						const oceanRate = 0.3;
 						const cloudRate = 0.5;
 						const containerRate = 0.1;
+						const imgSecRate = 1.2;
 						
 						// ocean and boat move together, using the same rate
 						if (ocean) {
@@ -159,7 +160,11 @@
 						}
 						
 						if (boat) {
-							imageSection.style.transform = `translateY(${scrollY * oceanRate}px)`;
+							const windowWidth = window.innerWidth;
+							var scale = windowWidth/1300*imgSecRate<0.7?0.7:windowWidth/1300*imgSecRate;
+							scale = scale>1?1:scale;
+
+							imageSection.style.transform = `translateY(${scrollY * oceanRate}px) scale(${scale})`;
 						}
 						
 						// clouds move faster
@@ -189,6 +194,32 @@
 			
 			// start typing effect
 			typeText();
+
+			// adjust element size
+			function adjustElementSize(){
+				const windowWidth = window.innerWidth
+				const imageSection = document.querySelector('.image-section');
+				const titleSection = document.querySelector('.title-section');
+				const scrollY = window.scrollY;
+				const oceanRate = 0.3;
+				const imgSecRate = 1.2;
+				if(windowWidth < 1300){
+					if(imageSection){
+						console.log('adjust...')
+						var scale = windowWidth/1300*1.2<0.7?0.7:windowWidth/1300*imgSecRate;
+						scale = scale>1?1:scale;
+						imageSection.style.transform = `translateY(${scrollY * oceanRate}px) scale(${scale})`;
+						titleSection.style.transform = `scale(${windowWidth/1300<0.6?0.6:windowWidth/1300})`;
+					}
+				}else{
+					if(imageSection){
+						imageSection.style.transform = `translateY(${scrollY * oceanRate}px)`;
+						titleSection.style.transform = `scale(1)`;
+					}
+				}
+			}
+			adjustElementSize();
+			window.addEventListener('resize', adjustElementSize);
 			{% endif %}
 		});
 	</script>
