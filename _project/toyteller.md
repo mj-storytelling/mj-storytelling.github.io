@@ -12,16 +12,14 @@ abstract: "We introduce Toyteller, an AI-powered storytelling system where users
   img{
     display: block;
     margin: auto;
-    margin-top: 50px;
+    margin-bottom: 10px;
   }
 </style>
 <div>
 <span style="font-size: 23px;">🫱🧸<span style="padding-left:20px">🦖🫲What if we can tell a story simply by playing with toys?</span></span>
-<br/>
 <img style="width: 100%" src="/img/projects/toyteller/motivation1.gif">
 <br/>
 <span style="font-size: 23px;">🫱🧸<span style="padding-left:20px">🦖🤖What if we can do toy-playing with an AI to collaboratively tell a story?</span></span>
-<br/>
 <img style="width: 100%" src="/img/projects/toyteller/motivation2.gif">
 <br/>
 <span style="font-size: 23px;">🧸✨📜 Toyteller enables such an interaction of <span style="font-weight: bold">toy-playing-based storytelling</span> with the power of <span style="font-weight: bold">generative AI</span>.</span>
@@ -62,7 +60,7 @@ To enable this interaction, we need to translate motions to texts and vice versa
 For such translation, we first tried to map the motions and texts onto the shared vector representaton of <b>action information layer</b>.
 <br/>
 <img style="width: 50%" src="/img/projects/toyteller/technical_overview.png">
-<br/>
+
 The action information layer consists of two pieces of information, 
 <br/>
 1) <i>action embedding (action)</i>, which is about which event is happening between two characters, and 
@@ -71,13 +69,15 @@ The action information layer consists of two pieces of information,
 <br/>
 Note that action embedding is derived from existing text embedding vector space and active character indicator is binary boolean.
 <br/>
-<img style="width: 75%" src="/img/projects/toyteller/technical_details.png">
 <br/>
+<br/>
+<img style="width: 75%" src="/img/projects/toyteller/technical_details.png">
 The task of translating motions to action information (<span style="color: hotpink"><b>motion2action</b></span> and <span style="color: purple"><b>motion2char</b></span>) is done by our trained LSTM models.
 Generating motions out of action informaiton (<span style="color: royalblue"><b>proactive action+char2motion</b></span> and <span style="color: teal"><b>proactive action+char2motion</b></span>) is also done by training our LSTM models.
 <br/>
-<img style="width: 75%" src="/img/projects/toyteller/action2text.png">
 <br/>
+<br/>
+<img style="width: 75%" src="/img/projects/toyteller/action2text.png">
 To generate texts out of action information (<span style="color: peru"><b>action+char2text</b></span> in the overview diagram), we mapped action embeddings to <i>soft prompts</i> in the LLM's input embedding space, so that we can use it within the prompt to generate a story. Active character indicator was also reflected onto the story generation prompt.
 <br/>
 For translating texts into action information (<span style="color: crimson"><b>text2action+char</b></span>), we used a combination of text embedding models and LLM classifications.
@@ -94,20 +94,19 @@ We compared our approaches to GPT-4o, in terms of performances in
 <br/>
 3) generating motions out of action information (<span style="color: royalblue"><b>proactive action+char2motion</b></span> and <span style="color: teal"><b>proactive action+char2motion</b></span>). 
 <br/>
-<br/>
+<br/><br/>
 <b>Overall, our system outperforms a competitive baseline, GPT-4o in many aspects.</b>
-
+<br/>
+<br/><br/>
 <img style="width: 100%" src="/img/projects/toyteller/motion2action_eval.png">
 <i style="font-size: 15px;">For 1) <span style="color: hotpink"><b>motion2action</b></span> and <span style="color: purple"><b>motion2char</b></span>, we evaluated if motion2action places gold standard actions in higher ranks (Action Rank) with more weights (Action Weight Ratio
 to Top 1) in shorter times (Action Latency) compared to GPT-4o alternatives. We also compared motion2char to GPT-4o regarding
 accuracy in classifying active characters (Character Correctness) and latency (Character Latency). GPT-4o-V uses motion images as input and GPT-4o-C uses textual coordinates as input.</i>
-<br/><br/>
+<br/><br/><br/>
 <img style="width: 100%" src="/img/projects/toyteller/motion2text_eval.png">
-<br/>
 <i style="font-size: 15px;">For 2) <span style="color: hotpink"><b>motion2action</b></span> and <span style="color: purple"><b>motion2char</b></span> ➔ <span style="color: peru"><b>action+char2text</b></span>, we assessed motion-text alignment, novelty/interestingness, coherence/grammaticality, latency, and diversity in text generation. Ours-top1 indicates the condition that does not use soft prompts.</i>
-<br/><br/>
+<br/><br/><br/>
 <img style="width: 50%" src="/img/projects/toyteller/action2motion_eval.png">
-<br/>
 <i style="font-size: 15px;">For 3) <span style="color: royalblue"><b>proactive action+char2motion</b></span> and <span style="color: teal"><b>proactive action+char2motion</b></span>, we evaluated alignment between actions and motions, realism of the motion (e.g., the motion does not have drastic jitters), and latency.</i>
 <br/><br/><br/>
 </div>
@@ -164,15 +163,16 @@ Toy-playing was more adequate for expressing motion/action-related nuanced ideas
 On the other hand, natural language prompting was more adequate if the user wants to be specific on aspects that is irrelevant to actions/motions. 
 <br/><br/>
 As Toyteller allows users to use both interaction approaches, we could observe users using these approaches in mix, complementing these with each other. 
-
-<img style="width: 50%" src="/img/projects/toyteller/mix1.png"><br/>
+<br/><br/>
+<img style="width: 50%" src="/img/projects/toyteller/mix1.png">
 <i style="font-size: 15px;">A case of mixing motion and natural language prompt inputs.</i>
 <br/><br/>
 We could also observe users flexibly dividing roles with AI in terms of which aspects of artifacts will be created by whom.
-<img style="width: 100%" src="/img/projects/toyteller/mix2.png"><br/>
+<br/><br/>
+<img style="width: 100%" src="/img/projects/toyteller/mix2.png">
 <i style="font-size: 15px;">Various cases of user dividing roles with AI.</i>
 <br/><br/>
-<img style="width: 50%" src="/img/projects/toyteller/usage_pattern.png"><br/>
+<img style="width: 50%" src="/img/projects/toyteller/usage_pattern.png">
 <i style="font-size: 15px;">The distribution of how participants created story sentences and motions. ‘Prompted’ means that the user input conditioning natural language prompts when generating text, and ‘edited’ means that the user edited story text after AI generated them. ‘Partial human motion’ indicates both human and machine contributed to creating motions. ‘B’ and ‘T’ denote ‘baseline’ and ‘Toyteller’, respectively.</i>
 <br/><br/><br/>
 </div>
@@ -180,9 +180,9 @@ We could also observe users flexibly dividing roles with AI in terms of which as
 # Design Space
 <div>
 
-We do not think that Toyteller is the only instantiation of toy-playing interactions. We imagine that there can be many other directions. Hoping to help future researchers, we lay out the design space of toy-playing interactions.<br/>
+We do not think that Toyteller is the only instantiation of toy-playing interactions. We imagine that there can be many other directions. Hoping to help future researchers, we lay out the design space of toy-playing interactions.<br/><br/>
 <img style="width: 100%" src="/img/projects/toyteller/design_space.png"><br/>
-<br/><br/><br/> 
+<br/><br/> 
 </div>
 
 ## Bibtex
