@@ -21,20 +21,26 @@
 	"name": "Uchan Sun",
 	"role": "Research Artist",
 	"url": "https://fakecheese.me",
-	"portrait": "/img/uchan.jpg",
+	"portrait": "/img/uchan.jpg"
+},
+{
+	"name": "Tiffany Wang",
+	"role": "Research Engineer",
+	"url": "https://tiffanywang.me",
+	"portrait": "/img/tiffany.jpg"
 },
 {
 	"name": "Taewook Kim",
 	"role": "Visiting Researcher",
 	"term": "Spring-Summer 2024",
 	"url": "https://taewookkim.com",
-	"portrait": "/img/taewook.jpg",
+	"portrait": "/img/taewook.jpg"
 },
 {
 	"name": "Alex Calderwood",
 	"role": "Visiting Researcher",
 	"term": "Summer-Fall 2024",
 	"url": "https://acalde24.gitlab.io/portfolio",
-	"portrait": "/img/alex.jpeg",
-},
+	"portrait": "/img/alex.jpeg"
+}
 ]
