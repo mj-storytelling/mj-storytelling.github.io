@@ -1,0 +1,5 @@
+# robots.txt for Midjourney Storytelling Lab
+User-agent: *
+Allow: /
+
+Sitemap: https://mj-storytelling.github.io/sitemap.xml 

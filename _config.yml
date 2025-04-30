@@ -2,3 +2,29 @@ collections:
   project:
     output: true
     permalink: /project/:path
+
+# Site settings for SEO
+title: Midjourney Storytelling Lab
+tagline: Lab for AI-supported storytelling
+description: Lab building expressive, approachable, and controllable tools for AI-supported storytelling
+url: https://mj-storytelling.github.io
+author: Midjourney Storytelling Lab
+logo: /img/website/boat_patchwork.png
+social:
+  name: Midjourney Storytelling Lab
+  links:
+    - https://www.midjourney.com/
+
+# Jekyll SEO Tag settings
+lang: en_US
+twitter:
+  username: midjourney
+  card: summary_large_image
+
+# Plugins
+plugins:
+  - jekyll-seo-tag
+
+# SEO Settings
+jekyll-seo-tag:
+  enable_canonical_urls: true
