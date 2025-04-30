@@ -1,6 +1,49 @@
 ---
 layout: default
 ---
+{% assign page_title = page.title %}
+{% assign page_description = page.abstract | truncate: 160 %}
+{% assign page_image = page.image | absolute_url %}
+
+{% if page_title %}
+  {% assign seo_title = page_title %}
+{% endif %}
+
+{% if page_description %}
+  {% assign seo_description = page_description %}
+{% endif %}
+
+{% if page_image %}
+  {% assign seo_image = page_image %}
+{% endif %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "headline": "{{ page.title }}",
+  "author": [
+    {% for author in page.authors %}
+    {"@type": "Person", "name": "{{ author }}"{% if forloop.last == false %},{% endif %}
+    }{% if forloop.last == false %},{% endif %}
+    {% endfor %}
+  ],
+  "abstract": "{{ page.abstract }}",
+  "image": "{{ page.image | absolute_url }}",
+  {% if page.pdf %}
+  "url": "{{ page.pdf }}",
+  {% endif %}
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ site.title }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ site.logo | absolute_url }}"
+    }
+  }
+}
+</script>
+
 <style>
   h1, h2, h3, h4, h5, h6 {
     color: var(--primary-dark);
