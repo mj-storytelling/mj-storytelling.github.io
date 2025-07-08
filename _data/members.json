@@ -30,6 +30,33 @@
 	"portrait": "/img/tiffany.jpg"
 },
 {
+	"name": "Yi Wang",
+	"role": "Research Scientist",
+	"url": "https://www.linkedin.com/in/yi-wang-aba36298/",
+	"portrait": "/img/yi.jpeg"
+},
+{
+	"name": "Shm Garanganao Almeda",
+	"role": "Visiting Researcher",
+	"term": "Summer 2025",
+	"url": "https://shmuh.co/",
+	"portrait": "/img/shm.png"
+},
+{
+	"name": "Brett A. Halperin",
+	"role": "Visiting Researcher",
+	"term": "Summer 2025",
+	"url": "https://www.bretthalperin.com/",
+	"portrait": "/img/brett.png"
+},
+{
+	"name": "Yuwen Lu",
+	"role": "Visiting Researcher",
+	"term": "Summer 2025",
+	"url": "https://www.yuwen.io/",
+	"portrait": "/img/yuwen.png"
+},
+{
 	"name": "Taewook Kim",
 	"role": "Visiting Researcher",
 	"term": "Spring-Summer 2024",
