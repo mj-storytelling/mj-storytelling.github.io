@@ -260,6 +260,7 @@
     "pubtype": "short",
     "cover_image": "/img/covers/drama_still.png",
     "summary": "An LLM-powered storylets framework that supports the authoring of responsive, open-ended interactive stories.",
+    "parent_project_id": "wang2025dramamancer",
     "links": [
       {
         "text": "📄 Paper",
