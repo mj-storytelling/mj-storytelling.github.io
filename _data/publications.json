@@ -21,6 +21,34 @@
     }
   ]
 },
+{
+    "id": "wang2025dramamancer",
+    "title": "Dramamancer: Interactive Narratives with LLM-powered Storylets",
+    "url": "https://storytelling-dev.midjourney.com",
+    "authors": [
+      "Tiffany Wang",
+      "Yuqian Sun", 
+      "Yi Wang",
+      "Melissa Roemmele",
+      "John Joon Young Chung",
+      "Max Kreminski"
+    ],
+    "year": "2025",
+    "pubtype": "short",
+    "cover_image": "/img/covers/dramamancer_still.png",
+    "hover_image": "/img/covers/dramamancer_anim.gif",
+    "summary": "AI-powered game engine in the style of visual novels.",
+    "links": [
+      {
+        "text": "🎨 Available now!",
+        "url": "https://storytelling-dev.midjourney.com"
+      },
+      {
+        "text": "📄 UIST 2025 Demo Paper",
+        "url": "https://dl.acm.org/doi/10.1145/3746058.3758995"
+      }
+    ]
+  },
   {
     "id": "chung2025diversity",
     "title": "Modifying Large Language Model Post-Training for Diverse Creative Writing",
@@ -145,30 +173,7 @@
     "summary": "UIST 2024 Demo",
     "links": [
     ]
-  },
-  {
-    "id": "sun2025dramallama",
-    "title": "Drama Llama: An LLM-Powered Storylets Framework for Authorable Responsiveness in Interactive Narrative",
-    "url": "https://arxiv.org/abs/2501.09099",
-    "authors": [
-      "Yuqian Sun",
-      "Phoebe J. Wang", 
-      "John Joon Young Chung",
-      "Melissa Roemmele",
-      "Taewook Kim",
-      "Max Kreminski"
-    ],
-    "year": "2024",
-    "pubtype": "short",
-    "cover_image": "/img/covers/drama_still.png",
-    "summary": "An LLM-powered storylets framework that supports the authoring of responsive, open-ended interactive stories.",
-    "links": [
-      {
-        "text": "📄 Paper",
-        "url": "https://arxiv.org/abs/2501.09099"
-      }
-    ]
-  },
+  }
   {
     "id": "chung2024patchview",
     "title": "Patchview: LLM-Powered Worldbuilding with Generative Dust and Magnet Visualization",
@@ -238,5 +243,28 @@
     "pubtype": "workshop",
     "cover_image": "/img/covers/intent_still.png",
     "summary": "📄 IUI HAI-GEN paper"
+  },
+  {
+    "id": "sun2025dramallama",
+    "title": "Drama Llama: An LLM-Powered Storylets Framework for Authorable Responsiveness in Interactive Narrative",
+    "url": "https://arxiv.org/abs/2501.09099",
+    "authors": [
+      "Yuqian Sun",
+      "Phoebe J. Wang", 
+      "John Joon Young Chung",
+      "Melissa Roemmele",
+      "Taewook Kim",
+      "Max Kreminski"
+    ],
+    "year": "2024",
+    "pubtype": "short",
+    "cover_image": "/img/covers/drama_still.png",
+    "summary": "An LLM-powered storylets framework that supports the authoring of responsive, open-ended interactive stories.",
+    "links": [
+      {
+        "text": "📄 Paper",
+        "url": "https://arxiv.org/abs/2501.09099"
+      }
+    ]
   }
 ]
